@@ -10,6 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [
+  { name = "Raitul Hasan Priyo" },
   { name = "MindLatticeAI Contributors" }
 ]
 keywords = [
@@ -32,8 +33,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/your-org/mindlatticeai"
-Issues = "https://github.com/your-org/mindlatticeai/issues"
+Homepage = "https://github.com/raitulh/MindLatticeAI"
+Issues = "https://github.com/raitulh/MindLatticeAI/issues"
+Repository = "https://github.com/raitulh/MindLatticeAI.git"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/mindlatticeai"]
@@ -42,4 +44,5 @@ packages = ["src/mindlatticeai"]
 pythonpath = ["src"]
 testpaths = ["tests"]
 addopts = "-q"
+asyncio_default_fixture_loop_scope = "function"
 

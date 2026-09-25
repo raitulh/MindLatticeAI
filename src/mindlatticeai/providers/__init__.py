@@ -1,4 +1,4 @@
-from mindlatticeai.providers.base import ModelProvider
+from mindlatticeai.providers.base import ModelProvider, ProviderNotConfiguredError
 from mindlatticeai.providers.local import LocalHeuristicProvider
 from mindlatticeai.providers.optional import (
     ClaudeProvider,
@@ -16,5 +16,6 @@ __all__ = [
     "ModelProvider",
     "OllamaProvider",
     "OpenAIProvider",
+    "ProviderNotConfiguredError",
 ]
 

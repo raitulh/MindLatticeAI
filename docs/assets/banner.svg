@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="100%" style="background:#090d16;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.5);">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1128" />
+      <stop offset="50%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#140b28" />
+    </linearGradient>
+
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#7000FF" />
+      <stop offset="100%" stop-color="#FF007A" />
+    </linearGradient>
+
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#8A2BE2" stop-opacity="0.2" />
+    </linearGradient>
+
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#00F0FF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="purpleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#7E22CE" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#3B0764" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="neonBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowSubtle" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      .pulse-line {
+        stroke-dasharray: 8, 16;
+        animation: dash 3s linear infinite;
+      }
+      .pulse-line-rev {
+        stroke-dasharray: 6, 12;
+        animation: dash-rev 4s linear infinite;
+      }
+      .floating-node {
+        animation: float 4s ease-in-out infinite;
+      }
+      .floating-node-delayed {
+        animation: float 4s ease-in-out 2s infinite;
+      }
+      .orbit-spin {
+        transform-origin: 155px 140px;
+        animation: spin 16s linear infinite;
+      }
+      .orbit-spin-rev {
+        transform-origin: 155px 140px;
+        animation: spin-rev 24s linear infinite;
+      }
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: 2px;
+      }
+      .sub-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+      .tag-text {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 11px;
+        font-weight: 600;
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -48; }
+      }
+      @keyframes dash-rev {
+        to { stroke-dashoffset: 48; }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes spin-rev {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+      @keyframes pulseRing {
+        0% { r: 6px; opacity: 0.9; }
+        50% { r: 14px; opacity: 0.2; }
+        100% { r: 6px; opacity: 0.9; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="900" height="280" fill="url(#bgGlow)" />
+
+  <!-- Background Tech Grid Lines -->
+  <g stroke="rgba(255,255,255,0.03)" stroke-width="1">
+    <line x1="0" y1="40" x2="900" y2="40" />
+    <line x1="0" y1="90" x2="900" y2="90" />
+    <line x1="0" y1="140" x2="900" y2="140" />
+    <line x1="0" y1="190" x2="900" y2="190" />
+    <line x1="0" y1="240" x2="900" y2="240" />
+    <line x1="80" y1="0" x2="80" y2="280" />
+    <line x1="230" y1="0" x2="230" y2="280" />
+    <line x1="380" y1="0" x2="380" y2="280" />
+    <line x1="530" y1="0" x2="530" y2="280" />
+    <line x1="680" y1="0" x2="680" y2="280" />
+    <line x1="830" y1="0" x2="830" y2="280" />
+  </g>
+
+  <!-- Left Side: 3D Animated Cognitive Lattice / Brain Cube -->
+  <g id="lattice-graphic">
+    <!-- Ambient back glow -->
+    <circle cx="155" cy="140" r="100" fill="url(#purpleGlow)" filter="url(#neonBlur)" opacity="0.6" />
+    <circle cx="155" cy="140" r="60" fill="url(#nodeGlow)" filter="url(#neonBlur)" opacity="0.5" />
+
+    <!-- Orbit rings -->
+    <ellipse cx="155" cy="140" rx="95" ry="42" fill="none" stroke="rgba(0, 240, 255, 0.25)" stroke-width="1.2" class="orbit-spin" stroke-dasharray="10, 8" />
+    <ellipse cx="155" cy="140" rx="80" ry="80" fill="none" stroke="rgba(168, 85, 247, 0.2)" stroke-width="1" class="orbit-spin-rev" stroke-dasharray="8, 12" />
+
+    <!-- 3D Isometric Lattice Graph Structure -->
+    <g class="floating-node">
+      <!-- Lattice connecting beams -->
+      <line x1="155" y1="75" x2="215" y2="110" stroke="rgba(0,240,255,0.4)" stroke-width="2" />
+      <line x1="155" y1="75" x2="95" y2="110" stroke="rgba(0,240,255,0.4)" stroke-width="2" />
+      <line x1="95" y1="110" x2="155" y2="145" stroke="rgba(0,240,255,0.5)" stroke-width="2" />
+      <line x1="215" y1="110" x2="155" y2="145" stroke="rgba(0,240,255,0.5)" stroke-width="2" />
+
+      <line x1="155" y1="75" x2="155" y2="145" stroke="rgba(168,85,247,0.6)" stroke-width="2.5" class="pulse-line" />
+      <line x1="95" y1="110" x2="95" y2="180" stroke="rgba(112,0,255,0.4)" stroke-width="2" />
+      <line x1="215" y1="110" x2="215" y2="180" stroke="rgba(112,0,255,0.4)" stroke-width="2" />
+
+      <line x1="155" y1="145" x2="155" y2="215" stroke="rgba(255,0,122,0.5)" stroke-width="2.5" class="pulse-line-rev" />
+      <line x1="95" y1="180" x2="155" y2="215" stroke="rgba(0,240,255,0.4)" stroke-width="2" />
+      <line x1="215" y1="180" x2="155" y2="215" stroke="rgba(0,240,255,0.4)" stroke-width="2" />
+
+      <!-- Center Cross Beams -->
+      <line x1="95" y1="110" x2="215" y2="180" stroke="rgba(0,240,255,0.25)" stroke-width="1.2" stroke-dasharray="4,4" />
+      <line x1="215" y1="110" x2="95" y2="180" stroke="rgba(168,85,247,0.25)" stroke-width="1.2" stroke-dasharray="4,4" />
+
+      <!-- 3D Lattice Spherical Nodes -->
+      <!-- Top Apex Node (Planning) -->
+      <circle cx="155" cy="75" r="7" fill="#00F0FF" filter="url(#glowSubtle)" />
+      <circle cx="155" cy="75" r="3" fill="#ffffff" />
+
+      <!-- Left Middle Node (Policy) -->
+      <circle cx="95" cy="110" r="6" fill="#7000FF" filter="url(#glowSubtle)" />
+      <circle cx="95" cy="110" r="2.5" fill="#ffffff" />
+
+      <!-- Right Middle Node (Router) -->
+      <circle cx="215" cy="110" r="6" fill="#00F0FF" filter="url(#glowSubtle)" />
+      <circle cx="215" cy="110" r="2.5" fill="#ffffff" />
+
+      <!-- Core Central Node (Cognitive DAG) -->
+      <circle cx="155" cy="145" r="11" fill="url(#primaryGrad)" filter="url(#glowSubtle)" />
+      <circle cx="155" cy="145" r="5" fill="#ffffff" />
+
+      <!-- Left Bottom Node (Tools) -->
+      <circle cx="95" cy="180" r="6" fill="#A855F7" filter="url(#glowSubtle)" />
+      <circle cx="95" cy="180" r="2.5" fill="#ffffff" />
+
+      <!-- Right Bottom Node (Memory) -->
+      <circle cx="215" cy="180" r="6" fill="#00F0FF" filter="url(#glowSubtle)" />
+      <circle cx="215" cy="180" r="2.5" fill="#ffffff" />
+
+      <!-- Bottom Apex Node (Learning Loop) -->
+      <circle cx="155" cy="215" r="8" fill="#FF007A" filter="url(#glowSubtle)" />
+      <circle cx="155" cy="215" r="3.5" fill="#ffffff" />
+    </g>
+  </g>
+
+  <!-- Right Side: Typography & Badges -->
+  <g transform="translate(300, 0)">
+    <!-- Version Pill -->
+    <g transform="translate(0, 48)">
+      <rect width="138" height="24" rx="12" fill="rgba(0, 240, 255, 0.08)" stroke="rgba(0, 240, 255, 0.3)" stroke-width="1" />
+      <circle cx="14" cy="12" r="4" fill="#00F0FF">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="26" y="16" fill="#00F0FF" class="tag-text">v0.1.0 • RESEARCH</text>
+    </g>
+
+    <!-- Main Title -->
+    <g transform="translate(0, 108)">
+      <!-- Glow Underlay -->
+      <text x="0" y="0" font-size="44" fill="url(#primaryGrad)" class="title-text" filter="url(#neonBlur)" opacity="0.6">MindLatticeAI</text>
+      <!-- Crisp Foreground -->
+      <text x="0" y="0" font-size="44" fill="url(#primaryGrad)" class="title-text">MindLatticeAI</text>
+    </g>
+
+    <!-- Subtitle -->
+    <text x="0" y="142" font-size="16" fill="#CBD5E1" class="sub-text">
+      Adaptive AI Orchestration Framework
+    </text>
+
+    <!-- Core Highlights -->
+    <g transform="translate(0, 172)">
+      <text x="0" y="0" font-size="13" fill="#94A3B8" class="sub-text">
+        <tspan fill="#00F0FF">✦</tspan> Cognitive DAG Execution   
+        <tspan fill="#A855F7">✦</tspan> Evolvable Prompt Genomes   
+        <tspan fill="#FF007A">✦</tspan> Execution-History Learning
+      </text>
+      <text x="0" y="24" font-size="13" fill="#94A3B8" class="sub-text">
+        <tspan fill="#10B981">✦</tspan> Multi-Layer Memory Mesh   
+        <tspan fill="#F59E0B">✦</tspan> Adaptive Prior Routing   
+        <tspan fill="#60A5FA">✦</tspan> Zero-Dependency Out of the Box
+      </text>
+    </g>
+
+    <!-- Bottom Metrics Strip -->
+    <g transform="translate(0, 226)">
+      <!-- Badge 1: Python -->
+      <rect x="0" y="0" width="102" height="24" rx="6" fill="#131B2E" stroke="rgba(255,255,255,0.08)" />
+      <text x="10" y="16" fill="#38BDF8" font-size="11" font-family="sans-serif" font-weight="600">Python 3.10+</text>
+
+      <!-- Badge 2: License -->
+      <rect x="110" y="0" width="86" height="24" rx="6" fill="#131B2E" stroke="rgba(255,255,255,0.08)" />
+      <text x="120" y="16" fill="#4ADE80" font-size="11" font-family="sans-serif" font-weight="600">MIT License</text>
+
+      <!-- Badge 3: Architecture -->
+      <rect x="204" y="0" width="124" height="24" rx="6" fill="#131B2E" stroke="rgba(255,255,255,0.08)" />
+      <text x="214" y="16" fill="#F472B6" font-size="11" font-family="sans-serif" font-weight="600">Cognitive Graphs</text>
+
+      <!-- Badge 4: Tests Passed -->
+      <rect x="336" y="0" width="116" height="24" rx="6" fill="#131B2E" stroke="rgba(255,255,255,0.08)" />
+      <text x="346" y="16" fill="#A78BFA" font-size="11" font-family="sans-serif" font-weight="600">18/18 Tests Pass</text>
+    </g>
+  </g>
+</svg>
