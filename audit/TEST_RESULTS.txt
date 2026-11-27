@@ -1,0 +1,10 @@
+No command pytest found, did you mean:
+ Command aatest in package aalib
+ Command ctest in package cmake
+ Command test in package coreutils
+ Command stest in package dmenu from the x11-repo repository
+ Command eltest in package execline
+ Command shtest in package mesa-demos from the x11-repo repository
+ Command bltest in package nss-utils
+ Command dltest in package unixodbc
+ Command vttest in package vttest
