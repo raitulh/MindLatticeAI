@@ -1,0 +1,171 @@
+============================= test session starts ==============================
+platform android -- Python 3.14.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: /data/data/com.termux/files/home/MindLatticeAI
+configfile: pyproject.toml
+testpaths: tests
+plugins: cov-7.1.0
+collected 0 items / 8 errors
+
+==================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_agent_loop.py ___________________
+ImportError while importing test module '/data/data/com.termux/files/home/MindLatticeAI/tests/test_agent_loop.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../usr/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_agent_loop.py:1: in <module>
+    from mindlatticeai import Agent
+src/mindlatticeai/__init__.py:3: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/__init__.py:1: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/agent.py:10: in <module>
+    from mindlatticeai.core.config import RuntimeConfig
+src/mindlatticeai/core/config.py:7: in <module>
+    from pydantic import BaseModel, Field
+E   ModuleNotFoundError: No module named 'pydantic'
+___________________ ERROR collecting tests/test_benchmark.py ___________________
+ImportError while importing test module '/data/data/com.termux/files/home/MindLatticeAI/tests/test_benchmark.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../usr/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_benchmark.py:3: in <module>
+    from mindlatticeai import Agent
+src/mindlatticeai/__init__.py:3: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/__init__.py:1: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/agent.py:10: in <module>
+    from mindlatticeai.core.config import RuntimeConfig
+src/mindlatticeai/core/config.py:7: in <module>
+    from pydantic import BaseModel, Field
+E   ModuleNotFoundError: No module named 'pydantic'
+__________________ ERROR collecting tests/test_graph_retry.py __________________
+ImportError while importing test module '/data/data/com.termux/files/home/MindLatticeAI/tests/test_graph_retry.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../usr/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_graph_retry.py:3: in <module>
+    from mindlatticeai.graph import CheckpointStore, ExecutionGraphEngine
+src/mindlatticeai/__init__.py:3: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/__init__.py:1: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/agent.py:10: in <module>
+    from mindlatticeai.core.config import RuntimeConfig
+src/mindlatticeai/core/config.py:7: in <module>
+    from pydantic import BaseModel, Field
+E   ModuleNotFoundError: No module named 'pydantic'
+____________________ ERROR collecting tests/test_memory.py _____________________
+ImportError while importing test module '/data/data/com.termux/files/home/MindLatticeAI/tests/test_memory.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../usr/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_memory.py:1: in <module>
+    from mindlatticeai.memory import MemorySystem
+src/mindlatticeai/__init__.py:3: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/__init__.py:1: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/agent.py:10: in <module>
+    from mindlatticeai.core.config import RuntimeConfig
+src/mindlatticeai/core/config.py:7: in <module>
+    from pydantic import BaseModel, Field
+E   ModuleNotFoundError: No module named 'pydantic'
+____________________ ERROR collecting tests/test_policy.py _____________________
+ImportError while importing test module '/data/data/com.termux/files/home/MindLatticeAI/tests/test_policy.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../usr/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_policy.py:1: in <module>
+    from mindlatticeai.policy import PolicyEngine
+src/mindlatticeai/__init__.py:3: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/__init__.py:1: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/agent.py:10: in <module>
+    from mindlatticeai.core.config import RuntimeConfig
+src/mindlatticeai/core/config.py:7: in <module>
+    from pydantic import BaseModel, Field
+E   ModuleNotFoundError: No module named 'pydantic'
+____________________ ERROR collecting tests/test_prompts.py ____________________
+ImportError while importing test module '/data/data/com.termux/files/home/MindLatticeAI/tests/test_prompts.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../usr/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_prompts.py:1: in <module>
+    from mindlatticeai.prompts import PromptGenomeRegistry
+src/mindlatticeai/__init__.py:3: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/__init__.py:1: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/agent.py:10: in <module>
+    from mindlatticeai.core.config import RuntimeConfig
+src/mindlatticeai/core/config.py:7: in <module>
+    from pydantic import BaseModel, Field
+E   ModuleNotFoundError: No module named 'pydantic'
+___________________ ERROR collecting tests/test_providers.py ___________________
+ImportError while importing test module '/data/data/com.termux/files/home/MindLatticeAI/tests/test_providers.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../usr/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_providers.py:3: in <module>
+    from mindlatticeai.providers import (
+src/mindlatticeai/__init__.py:3: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/__init__.py:1: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/agent.py:10: in <module>
+    from mindlatticeai.core.config import RuntimeConfig
+src/mindlatticeai/core/config.py:7: in <module>
+    from pydantic import BaseModel, Field
+E   ModuleNotFoundError: No module named 'pydantic'
+____________________ ERROR collecting tests/test_router.py _____________________
+ImportError while importing test module '/data/data/com.termux/files/home/MindLatticeAI/tests/test_router.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../usr/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_router.py:3: in <module>
+    from mindlatticeai.router import ModelRouter
+src/mindlatticeai/__init__.py:3: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/__init__.py:1: in <module>
+    from mindlatticeai.core.agent import Agent
+src/mindlatticeai/core/agent.py:10: in <module>
+    from mindlatticeai.core.config import RuntimeConfig
+src/mindlatticeai/core/config.py:7: in <module>
+    from pydantic import BaseModel, Field
+E   ModuleNotFoundError: No module named 'pydantic'
+=============================== warnings summary ===============================
+../../usr/lib/python3.14/site-packages/_pytest/config/__init__.py:1636
+  /data/data/com.termux/files/usr/lib/python3.14/site-packages/_pytest/config/__init__.py:1636: PytestConfigWarning: Unknown config option: asyncio_default_fixture_loop_scope
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR tests/test_agent_loop.py
+ERROR tests/test_benchmark.py
+ERROR tests/test_graph_retry.py
+ERROR tests/test_memory.py
+ERROR tests/test_policy.py
+ERROR tests/test_prompts.py
+ERROR tests/test_providers.py
+ERROR tests/test_router.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 8 errors during collection !!!!!!!!!!!!!!!!!!!!
+========================= 1 warning, 8 errors in 0.77s =========================
